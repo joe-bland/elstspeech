@@ -1,0 +1,148 @@
+/*
+  Reset it as per https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,::after,::before{box-sizing:border-box}*{margin:0}body{line-height:1.5;-webkit-font-smoothing:antialiased}canvas,img,picture,svg,video{display:block;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}#__next,#root{isolation:isolate}
+
+@font-face {
+  font-family: "Rubik";
+  src:url(assets/Rubik-Regular.woff2) format("woff2"),
+  url(assets/Rubik-Regular.woff) format("woff");
+  font-weight:400;
+  font-style:normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src:url(assets/Rubik-Bold.woff2) format("woff2"),
+  url(assets/Rubik-Bold.woff) format("woff");
+  font-weight:700;
+  font-style:normal;
+}
+
+:root {
+  --green: #007C8F;
+  --light-pink: #EFE0DC;
+  --pastel-orange: #FAB58E;
+  --darkest: #004752;
+}
+
+html, body {
+  height:100%;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  font-weight:400;
+  font-size:15px;
+  line-height: 1.2;
+}
+.small {
+  font-size:13px;
+}
+.large {
+  font-size:17px;
+}
+a {
+  text-decoration: none;
+  color: var(--green);
+}
+h3, h2, h1 {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.1;
+}
+h3 {
+  font-size:13px;
+  font-weight:700;
+}
+h2 {
+  font-size: 33px;
+  font-weight:400;
+}
+h1 {
+  font-size: 36px;
+  font-weight:700;
+}
+
+body{
+  font-family: "Rubik", sans-serif;
+  color: var(--green);
+  padding: 24px 16px 16px 16px;
+}
+
+.container {
+  max-width: 1160px;
+  height:100%;
+  margin:auto;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 100px 1fr 100px;
+  gap: 16px 0;
+  grid-template-areas:
+    "logotype"
+    "main"
+    "base";
+}
+.main {
+  grid-area: main;
+  padding-bottom: 88px;
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "content";
+  }
+
+.content, .base {
+  display: grid;
+  gap: 16px 0;
+}
+.content {
+  grid-area: content;
+  grid-template-areas:
+    "logo"
+    "message";
+  }
+.base {
+  grid-area: base;
+  align-items: center;
+  border-radius: 16px;
+  background-color: var(--light-pink);
+  grid-template-areas:
+    "footer";
+  }
+
+  .logotype, .logo, .message, .footer {
+    padding-left: 16px;
+  }
+  .logotype {
+    grid-area: logotype;
+  }
+  .logo {
+    grid-area: logo;
+  }
+  .message {
+    grid-area: message;
+  }
+  .message h2{
+    max-width: 350px;
+  }
+  .footer {
+    grid-area: footer;
+  }
+
+@media only screen and (min-width: 600px){
+  .content, .base {
+    grid-template-columns: 30% 35% 35%;
+  }
+  .content {
+    grid-area: content;
+    grid-template-areas:
+      "logo message .";
+    }
+  .base {
+    grid-template-areas:
+      ". footer footer";
+  }
+  .message h2{
+    min-width: 350px;
+    max-width: 350px;
+  }
+}
