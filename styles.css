@@ -54,7 +54,7 @@ h3 {
   font-weight:700;
 }
 h2 {
-  font-size: 33px;
+  font-size: 36px;
   font-weight:400;
 }
 h1 {
@@ -122,7 +122,7 @@ body{
     grid-area: message;
   }
   .message h2{
-    max-width: 350px;
+    max-width: 360px;
   }
   .footer {
     grid-area: footer;
@@ -142,7 +142,6 @@ body{
       ". footer footer";
   }
   .message h2{
-    min-width: 350px;
-    max-width: 350px;
+    min-width: 360px;
   }
 }
