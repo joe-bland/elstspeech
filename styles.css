@@ -115,6 +115,9 @@ body{
   .logotype {
     grid-area: logotype;
   }
+  .logotype h1 {
+    display: none
+  }
   .logo {
     grid-area: logo;
   }
