@@ -116,7 +116,8 @@ body{
     grid-area: logotype;
   }
   .logotype h1 {
-    display: none
+    height: 0;
+    overflow: hidden;
   }
   .logo {
     grid-area: logo;
